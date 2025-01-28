@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.wagemanagement.mapper.SalariesMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.wagemanagement.model.domain.Salaries">
+            <id property="salaryId" column="salaryId" jdbcType="INTEGER"/>
+            <result property="employeeId" column="employeeId" jdbcType="INTEGER"/>
+            <result property="year" column="year" jdbcType="INTEGER"/>
+            <result property="month" column="month" jdbcType="INTEGER"/>
+            <result property="workDays" column="workDays" jdbcType="INTEGER"/>
+            <result property="actualWorkDays" column="actualWorkDays" jdbcType="INTEGER"/>
+            <result property="basicSalary" column="basicSalary" jdbcType="DECIMAL"/>
+            <result property="positionAllowance" column="positionAllowance" jdbcType="DECIMAL"/>
+            <result property="lunchAllowance" column="lunchAllowance" jdbcType="DECIMAL"/>
+            <result property="overtimeSalary" column="overtimeSalary" jdbcType="DECIMAL"/>
+            <result property="fullAttendanceBonus" column="fullAttendanceBonus" jdbcType="DECIMAL"/>
+            <result property="socialInsurance" column="socialInsurance" jdbcType="DECIMAL"/>
+            <result property="housingFund" column="housingFund" jdbcType="DECIMAL"/>
+            <result property="tax" column="tax" jdbcType="DECIMAL"/>
+            <result property="deductions" column="deductions" jdbcType="DECIMAL"/>
+            <result property="netSalary" column="netSalary" jdbcType="DECIMAL"/>
+            <result property="isDeleted" column="isDeleted" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        salaryId,employeeId,year,
+        month,workDays,actualWorkDays,
+        basicSalary,positionAllowance,lunchAllowance,
+        overtimeSalary,fullAttendanceBonus,socialInsurance,
+        housingFund,tax,deductions,
+        netSalary,isDeleted
+    </sql>
+</mapper>

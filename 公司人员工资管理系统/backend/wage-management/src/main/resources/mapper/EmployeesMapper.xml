@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.wagemanagement.mapper.EmployeesMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.wagemanagement.model.domain.Employees">
+            <id property="employeeId" column="employeeId" jdbcType="INTEGER"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="departmentId" column="departmentId" jdbcType="INTEGER"/>
+            <result property="isDeleted" column="isDeleted" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        employeeId,name,departmentId,
+        isDeleted
+    </sql>
+</mapper>

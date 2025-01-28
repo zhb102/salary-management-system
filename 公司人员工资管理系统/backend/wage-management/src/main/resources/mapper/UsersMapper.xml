@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.wagemanagement.mapper.UsersMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.wagemanagement.model.domain.Users">
+            <id property="userid" column="userid" jdbcType="INTEGER"/>
+            <result property="username" column="username" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="createdat" column="createdat" jdbcType="TIMESTAMP"/>
+            <result property="updatedat" column="updatedat" jdbcType="TIMESTAMP"/>
+            <result property="isdeleted" column="isdeleted" jdbcType="TINYINT"/>
+            <result property="userrole" column="userrole" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        userid,username,password,
+        createdat,updatedat,isdeleted,
+        userrole
+    </sql>
+</mapper>
